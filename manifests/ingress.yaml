@@ -8,5 +8,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: microservice-svc
-          servicePort: 9000
+          serviceName: microservice-svc-2
+          servicePort: 8080
