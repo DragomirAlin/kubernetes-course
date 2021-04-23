@@ -8,3 +8,7 @@ spec:
     app: microservice # This is the app as declared in the deployment.
   ports:
     - name: http
+      nodePort: 30000 # This is the port that is available outside. Value for nodePort can be between 30000-32767
+      protocol: TCP
+      port: 8000 # This is a port that is available to the cluster, in this case it can be ~ anything
+      targetPort: 8080 # This is the target port
