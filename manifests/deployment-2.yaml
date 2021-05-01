@@ -14,7 +14,8 @@ spec:
     spec:
       volumes: # Define volume
         - name: shared-image
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: image-claim
       containers:
         - name: image-finder
           image: jakousa/dwk-app3-image-finder:e11a700350aede132b62d3b5fd63c05d6b976394
