@@ -1,13 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: orderdb
-  name: orderdb-service
+  name: mongo
 spec:
-  ports:
-  - port: 27017
-    targetPort: 27017
   selector:
-    app: orderdb
-  clusterIP: None
+    app: mongo
+  ports:
+    - port: 27017
+      targetPort: 27017
