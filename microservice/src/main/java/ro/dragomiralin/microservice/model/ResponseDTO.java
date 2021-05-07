@@ -1,4 +1,4 @@
-package ro.dragomiralin.microservice;
+package ro.dragomiralin.microservice.model;
 
 import lombok.Builder;
 import lombok.Data;
