@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service-dep
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: os
+    spec:
+      containers:
+        - name: order-service
+          image: dragomiralin/order-service:1.0.0
+	- name: mongo
+	  image: mongo:latest
