@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderdb
+  labels:
+    app: orderdb
+spec:
+  selector: 
+    matchLabels:
+      app: orderdb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: orderdb
+      name: orderdb-service
+    spec:
+      containers:
+      - image: mongo:latest
+        name: orderdb     
+                
+        ports:
+        - containerPort: 27017
+          name: orderdb      
