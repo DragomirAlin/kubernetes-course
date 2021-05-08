@@ -1,12 +1,4 @@
 apiVersion: v1
-kind: ConfigMap
-metadata:
-   name: order-db-config
-data:
- host: orderdb-service
- database: order
----
-apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mongo-pvc
@@ -15,7 +7,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 256Mi
+      storage: 1Gi
 ---
 apiVersion: v1
 kind: Service
@@ -43,7 +35,7 @@ spec:
     spec:
       containers:
         - name: mongo
-          image: mongo
+          image: mongo:3.6.17-xenial
           ports:
             - containerPort: 27017
           volumeMounts:
