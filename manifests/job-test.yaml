@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test-request
+spec:
+  template:
+    spec:
+      containers:
+      - name: test-request
+        image: 
+        env:
+          - name: URL
+            value: "order-service/api"
+      restartPolicy: Never
