@@ -32,14 +32,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: order-service
+  name: order-svc
 spec:
+  type: ClusterIP
   selector:
     app: order-service
   ports:
-  - port: 7000
+  - port: 8080
+    protocol: TCP
     targetPort: 8080
-  type: ClusterIP
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -52,7 +53,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /?(.*)
+          - path: /
             backend:
-              serviceName: api-cluster-ip-service
-              servicePort: 7000
+              serviceName: order-svc
+              servicePort: 8080
