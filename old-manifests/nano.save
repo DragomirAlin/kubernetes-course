@@ -1,5 +1,0 @@
-  template:
-    metadata:
-      creationTimestamp: null
-      name: pixabay-apikey
-      namespace: default
