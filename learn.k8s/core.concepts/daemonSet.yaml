@@ -1,15 +1,15 @@
-apiVersion: apps/v1beta
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: ssd-monitor
 spec:
   selector:
-    matchesLables:
-      app: ssd-monitor
+    matchLabels:
+      name: ssd-monitor
   template:
     metadata:
       labels:
-        app: ssd-monitor
+        name: ssd-monitor
     spec:
       nodeSelector:
         disk: ssd

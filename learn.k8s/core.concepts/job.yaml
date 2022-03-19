@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batch-job
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    metadata:
+      labels:
+        app: batch-job
+    spec:
+      containers:
+      - name: batch
+        image: luksa/batch-job
+      restartPolicy: OnFailure
