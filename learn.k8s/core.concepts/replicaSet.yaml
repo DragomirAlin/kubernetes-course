@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: ReplicaSet
+metadata:
+  name: website-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: website-rs
+  template:
+    metadata:
+      labels:
+        app: website-rs
+    spec:
+      containers:
+        - name: website-nginx
+          image: nginx
+          ports:
+            - containerPort: 80

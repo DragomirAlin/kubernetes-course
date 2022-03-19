@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta
+kind: DaemonSet
+metadata:
+  name: ssd-monitor
+spec:
+  selector:
+    matchesLables:
+      app: ssd-monitor
+  template:
+    metadata:
+      labels:
+        app: ssd-monitor
+    spec:
+      nodeSelector:
+        disk: ssd
+      containers:
+        - name: ssd-monitor
+          image: luksa/ssd-monitor
+          ports:
+            - containerPort: 80
