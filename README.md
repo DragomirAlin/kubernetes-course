@@ -16,4 +16,4 @@ This is my way of learning Kubernetes.
 ## My Kubernetes
 - `minikube` in local
 - `kubespray` in the cloud(3 nodes on openstack)
-- `k3s` on raspberry PI cluster (project)[https://github.com/DragomirAlin/raspberry-k8s-cluster]
+- `k3s` on raspberry PI cluster [project](https://github.com/DragomirAlin/raspberry-k8s-cluster)
