@@ -2,7 +2,7 @@
 <img src="assets/img/logo.png" width="300">
 
 # Hands-on with Kubernetes
-This repo containts a lot of manifests, charts, learning sources, tutorials, fixes, articles and so on.
+This repo contains a lot of manifests, charts, learning sources, tutorials, fixes, articles and so on.
 
 This is my way of learning Kubernetes.
 
