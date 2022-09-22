@@ -41,6 +41,6 @@ This is my way of learning Kubernetes.
 - [Setup Prometheus Monitoring On Kubernetes](https://devopscube.com/setup-prometheus-monitoring-on-kubernetes/)
 - [21 Best Kubernetes Tutorials](https://scriptcrunch.com/kubernetes-tutorial-guides/)
 - [ScriptCrunch - DevOps Scripting](https://scriptcrunch.com/)
-
+- [Packet Pushers](https://www.youtube.com/c/PacketPushersNetwork/featured)
 ### Tools
 - [CLI](https://kubernetes.io/docs/tasks/tools/)
