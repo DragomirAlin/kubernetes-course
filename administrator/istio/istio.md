@@ -17,16 +17,16 @@ The components making Istio are:
 - Galley
 
 ### 1. Mixer
-    Mixer enforces access control and usage policies across the service mesh, and collects telemetry data from the Envoy proxy and other services.
+Mixer enforces access control and usage policies across the service mesh, and collects telemetry data from the Envoy proxy and other services.
 
 ### 2. Pilot
-    Pilot provides service discovery for the Envoy sidecards, traffic management capabilities for intelligent routing (e.g. A/B tests, canary rollouts, etc), and resiliency (timeouts, retires, circuit breakers, etc.)
+Pilot provides service discovery for the Envoy sidecards, traffic management capabilities for intelligent routing (e.g. A/B tests, canary rollouts, etc), and resiliency (timeouts, retires, circuit breakers, etc.)
 
 ### 3. Citadel
-    Citadel enables strong service-to-service and end-user authentication with built-in identity and credential management.
+Citadel enables strong service-to-service and end-user authentication with built-in identity and credential management.
 
 ### 4. Galley
-    Galley is Istio’s configuration validation, ingestion, processing and distribution component. It is responsible for insulating the rest of the Istio components from the details of obtaining user configuration from the underlying platform (e.g. Kubernetes).
+Galley is Istio’s configuration validation, ingestion, processing and distribution component. It is responsible for insulating the rest of the Istio components from the details of obtaining user configuration from the underlying platform (e.g. Kubernetes).
 
 
 ## Istio Installation
@@ -62,4 +62,16 @@ $ istioctl x precheck
 4. Install default profile
 ```bash
 $ istioctl install --set profile=default -y
+```
+```bash
+✔ Istio core installed
+✔ Istiod installed
+✔ Ingress gateways installed
+✔ Installation complete
+```
+
+5. Sidecar injection
+```bash
+kubectl label namespace default istio-injection=enabled
+kubectl get ns --show-labels
 ```
